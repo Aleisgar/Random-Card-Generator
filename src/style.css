@@ -1,1 +1,24 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-image: url(https://img.freepik.com/foto-gratis/fondo-creativo-ruleta-dados-juego-cartas-fichas-casino-sobre-fondo-oscuro_99433-24.jpg?w=826);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-size: cover;
+}
+
+.card {
+  background-color: white;
+  margin-top: 10%;
+  margin-left: 60%;
+  height: 400px;
+  width: 300px;
+  padding: 5px 10px;
+  border-radius: 5%;
+  box-shadow: 0px 5px 15px grey;
+}
+.icono {
+  height: 33%;
+  font-size: 75px;
+}
+.number {
+  font-size: 100px;
+}
