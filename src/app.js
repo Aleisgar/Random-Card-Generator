@@ -41,21 +41,20 @@ function generateCard() {
     : (cardiconbottom.style.color = "black");
 }
 
-window.onclick = function() {
-  generateCard();
-};
-document.querySelector(".boton1").addEventListener("click", generateCard);
-window.onclick = function cuentaAtras() {
-  var segundosInicio = 10;
-  var cronometro = setInterval(function() {
+function cuentaAtras() {
+  let segundosInicio = 10;
+  const btnCronometro = document.getElementById("btnCronometro");
+  btnCronometro.textContent = segundosInicio;
+  const cronometro = setInterval(function() {
     segundosInicio--;
-    document.getElementById("cronometro").textContent = segundosInicio;
+    btnCronometro.textContent = segundosInicio;
     if (segundosInicio === 0) {
       generateCard();
-      document.getElementById("cronometro").textContent = "Su carta";
-    }
-    if (segundosInicio < 0) {
-      document.getElementById("cronometro").textContent = "Su carta";
+      btnCronometro.textContent = "Su carta";
+      clearInterval(cronometro);
     }
   }, 1000);
-};
+}
+
+document.querySelector("#btnBaraja").addEventListener("click", generateCard);
+document.querySelector("#btnCronometro").addEventListener("click", cuentaAtras);
